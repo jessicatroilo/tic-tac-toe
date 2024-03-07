@@ -1,3 +1,4 @@
+/* Reset */
 *{
     margin: 0;
     padding: 0;
@@ -17,4 +18,26 @@ body{
     display: grid; 
     grid-template-columns: repeat(3, 5rem);
     grid-template-rows: repeat(3, 5rem);
+    gap: 1rem;
+    margin: 3rem auto;
+}
+
+.case{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /*taille des items*/
+}
+
+p{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Mise en avant du premier p*/
+p:first-of-type{
+    color: lightseagreen;
 }
