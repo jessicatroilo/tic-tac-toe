@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing :  border-box;
 }
+
+body{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    font-family: sans-serif;
+    margin: 2rem;
+}
+
+#grid{
+    display: grid; 
+    grid-template-columns: repeat(3, 5rem);
+    grid-template-rows: repeat(3, 5rem);
+}
