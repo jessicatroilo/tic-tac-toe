@@ -30,7 +30,18 @@
         <h1> TIC TAC TOE </h1>
     </header>
 
+    <div class="modal-container">
+        <div class="overlay">
+            <div class="modal" role="dialog" aria-labelledby="modalTitle">
+                <button class="close-modal" type="button">X</button>
+                <h2 class="modalTitle"></h1>
+                </h1>
+            </div>
+        </div>
+    </div>
+
     <main>
+        
         <div id="round">
             <p> A ton tour Joueur <span id ="player">1</span></p>
         </div>
@@ -52,12 +63,13 @@
             <p> Score Joueur 1 : <span id="score1">0</span></p>
             <p> Score Joueur 2 : <span id="score2">0</span></p>
             <p> Matchs nuls : <span id="scoreNull">0</span></p>
+            <button id="restartBtn">Restart</button>
         </div>
 
     </main>
 
     <footer>
-        Made by Jessica Troilo - Profil Github : 
+        Made by Jessica Troilo - Profil Github : <a href="https://github.com/jessicatroilo/tic-tac-toe" target="_blank"><i class="fa fa-github" style="font-size : 24px;"></i></a>
     </footer>
     <!-- ========== JS ========== -->
     <script src="./app.js"></script>

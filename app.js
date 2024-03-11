@@ -4,6 +4,10 @@ const player = document.querySelector('#player');
 const score1 = document.querySelector('#score1');
 const score2 = document.querySelector('#score2');
 const scoreNull = document.querySelector('#scoreNull');
+const modalContainer = document.querySelector('.modal-container');
+const modalTitle = document.querySelector('.modalTitle');
+const closeModal = document.querySelector('.close-modal');
+const restartButton = document.querySelector("#restartBtn")
 
 const state = {
 // valeurs par défaut
@@ -39,8 +43,13 @@ state.c8 = 0;
 state.c9 = 0; 
 };
 
-
-
+const resetAllGrid = () => {
+    resetState()
+    state.scoreP1 = 0;
+    state.scoreP2 = 0;
+    state.matchNull = 0;
+    cases.forEach((c) => (c.textContent = ""));
+}
 
 /**
  * vérifie les possibilités de victoires et de matchs nul
@@ -80,6 +89,11 @@ if (
     }
 };
 
+const toggleModal = () => {
+    modalContainer.classList.toggle("active");
+    
+};
+
 /**
  * fonction event relié à un addEventListener 
  * permet de savoir quelle case est jouée par quel player
@@ -100,7 +114,9 @@ state[idCase] = state.currentPlayer;
 const isVictory = checkVictory(); 
 
 if (isVictory === true){
-    alert("le gagnant est le joueur" + state.currentPlayer)
+    //alert("le gagnant est le joueur" + state.currentPlayer)
+    toggleModal()
+    modalTitle.textContent = "Le Joueur " + state.currentPlayer + " a gagné la manche"
     if (state.currentPlayer == 1) {
         state.scoreP1++;
         score1.textContent = state.scoreP1;
@@ -109,11 +125,12 @@ if (isVictory === true){
         score2.textContent = state.scoreP2;
     }
     resetState();
-    console.log (resetState)
+
     cases.forEach((c) => (c.textContent = ""));
 
 } else if (isVictory === null){
-    alert('Match nul');
+    toggleModal()
+    modalTitle.textContent = "Egalité ! "
     state.matchNull++;
     scoreNull.textContent = state.matchNull;
     resetState();
@@ -142,7 +159,10 @@ if (isVictory === true){
 // on va utiliser la fonction fléchée
 cases.forEach((element) => {
 element.addEventListener("click", playCase)
-})
+});
 
+closeModal.addEventListener("click", toggleModal );
+
+restartButton.addEventListener("click", resetAllGrid);
 
 
