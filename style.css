@@ -25,8 +25,8 @@ h1{
 
 #grid{
     display: grid; 
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: repeat(3, 6rem);
+    grid-template-columns: repeat(3, 8rem);
+    grid-template-rows: repeat(3, 8rem);
     gap: 1rem;
     margin: 1rem auto 3rem;
 }
@@ -38,11 +38,16 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem; /*taille des items*/
     color: #ca45b2;
     font-family: 'Metal Mania', display;
-
     
+}
+
+img{
+    width : 12vw;
+    height : 12vh;
+    max-width : 150px;
+    max-height : 150px;
 }
 
 p{

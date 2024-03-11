@@ -122,11 +122,15 @@ if (isVictory === true){
 } else if (isVictory === false) {
     if (state.currentPlayer == 1) {
         state.currentPlayer = 2;
-        event.target.textContent ="X" //TODO modifier avec une image
+        imageWandElement = document.createElement("img");
+        imageWandElement.src ="images/wand.png";
+        event.target.appendChild(imageWandElement);
         player.textContent = "2";
     } else {
         state.currentPlayer = 1;
-        event.target.textContent ="O" //TODO modifier avec une image
+        imagePotionElement = document.createElement("img");
+        imagePotionElement.src ="images/love-potions.png";
+        event.target.appendChild( imagePotionElement);
         player.textContent = "1";
     }
 }
