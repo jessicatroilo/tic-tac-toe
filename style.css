@@ -56,7 +56,7 @@ i{
 }
 
 .modal-container.active{
-    display: block;
+    /*display: block;*/
     visibility: visible;
     transition: visibility 0,4s 
 }
@@ -196,3 +196,81 @@ p{
 }
 
 /***** End Section Tour *****/
+
+
+/***** Medias Queries *****/  
+
+@media (min-width: 320px) and (max-width: 575.98px) {
+    #grid {
+        width: 100%;
+        gap : 0.2rem;
+        grid-template-columns: repeat(3, 4rem);
+        grid-template-rows: repeat(3, 4rem);
+        margin: 0.5rem 10rem 0.5rem;
+        
+    }
+
+    img{
+        width : 7vw;
+        height : 7vh;
+    }
+
+
+    #score {
+        margin-left : 10rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+    
+    }
+
+    #icone-player{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    #restartBtn{
+        padding: 0.4rem;
+        margin-left: 0;
+        font-size: medium;
+    }
+
+    h1{
+    
+        font-size: 2rem;
+    }
+
+    footer{
+        font-size: x-small;
+    }
+
+    .modal {
+        width: 95%;
+        max-width: 260px;
+        min-width: 150px;
+        padding: 1rem;
+    }
+
+    .close-modal{
+        padding: 0.1rem 0.3rem;
+        font-size: 0.5rem;       
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #grid #round #score {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+    #grid #round #score {
+        width: 100%;
+    }
+
+    footer{
+        margin : 25rem;
+    }
+}
+
