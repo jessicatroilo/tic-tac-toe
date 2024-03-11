@@ -122,11 +122,11 @@ if (isVictory === true){
 } else if (isVictory === false) {
     if (state.currentPlayer == 1) {
         state.currentPlayer = 2;
-        event.target.textContent ="X"
+        event.target.textContent ="X" //TODO modifier avec une image
         player.textContent = "2";
     } else {
         state.currentPlayer = 1;
-        event.target.textContent ="O"
+        event.target.textContent ="O" //TODO modifier avec une image
         player.textContent = "1";
     }
 }

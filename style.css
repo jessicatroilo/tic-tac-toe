@@ -12,32 +12,54 @@ body{
     flex-direction: column; 
     font-family: sans-serif;
     margin: 2rem;
+    background-color : #4C0070;
+    font-family:'Courier New', Courier, monospace
+    
+}
+
+h1{
+    color: #9168a8;
+    font-family: 'Metal Mania', display;
+    font-size: 4rem;
 }
 
 #grid{
     display: grid; 
-    grid-template-columns: repeat(3, 5rem);
-    grid-template-rows: repeat(3, 5rem);
+    grid-template-columns: repeat(3, 6rem);
+    grid-template-rows: repeat(3, 6rem);
     gap: 1rem;
-    margin: 3rem auto;
+    margin: 1rem auto 3rem;
 }
 
 .case{
-    border: 1px solid lightgrey;
+    border: 1px solid #4c945b;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem; /*taille des items*/
+    font-size: 4rem; /*taille des items*/
+    color: #ca45b2;
+    font-family: 'Metal Mania', display;
+
+    
 }
 
 p{
     margin-bottom: 1rem;
     font-size: 1.5rem;
+
 }
 
-/* Mise en avant du premier p*/
-p:first-of-type{
-    color: lightseagreen;
+#score{
+    color: #ca45b2;
+}
+
+
+#round{
+    color: #4c945b;
+    margin-top : 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
 }

@@ -6,9 +6,14 @@
 
     <!-- ========== CSS ========== -->
     <link rel="stylesheet" href="./style.css">
+
+
+    <!-- ========== FONTS ========== -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=metal-mania:400" rel="stylesheet" />
     
 
-    <title>Tic Tac Toe - Moon</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
     <header>
@@ -16,7 +21,9 @@
     </header>
 
     <main>
-
+        <div id="round">
+            <p> A ton tour Joueur <span id ="player">1</span></p>
+        </div>
         <div id ="grid">
 
             <div id="c1" class="case"></div>
@@ -32,7 +39,6 @@
         </div>
 
         <div id="score">
-            <p> A ton ton tour Joueur <span id ="player">1</span></p>
             <p> Score Joueur 1 : <span id="score1">0</span></p>
             <p> Score Joueur 2 : <span id="score2">0</span></p>
             <p> Matchs nuls : <span id="scoreNull">0</span></p>
