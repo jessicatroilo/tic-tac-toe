@@ -12,6 +12,7 @@ body{
     align-items: center;
     flex-direction: column; 
     font-family: sans-serif;
+    margin-top: 1rem;
     margin: 2rem;
     background-color : #4C0070;
     font-family:'Courier New', Courier, monospace;
@@ -24,6 +25,11 @@ h1{
     font-size: 4rem;
 }
 
+h2{
+    font-family:'Courier New', Courier, monospace;
+    text-shadow: #31223a 5px 5px 5px;
+}
+
 footer{
     margin-top: 1rem;
     color: #9168a8;
@@ -34,7 +40,6 @@ footer{
 i{
     color:#9168a8
 }
-
 
 /***** End Body HTML *****/  
 
@@ -55,6 +60,8 @@ i{
     visibility: visible;
     transition: visibility 0,4s 
 }
+
+
 
 .overlay{
     position: absolute;
@@ -83,6 +90,7 @@ i{
    transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.4s ease-out; 
+    
 
 }
 
@@ -100,8 +108,13 @@ i{
     top : 0.6rem;
     right : 0.6rem;
     cursor: pointer; 
-    background-color: #9168a8;
+    background-color: #4c945b;
+    color: white;
 
+}
+
+.close-modal:hover{
+    background-color: #33663e;  
 }
 
 /*****End Modal *****/  
@@ -113,7 +126,7 @@ i{
     grid-template-columns: repeat(3, 8rem);
     grid-template-rows: repeat(3, 8rem);
     gap: 1rem;
-    margin: 1rem auto 3rem;
+    margin: 1rem auto 1rem;
 }
 
 .case{
@@ -148,6 +161,11 @@ p{
 
 }
 
+#icone-player{
+    width: 2rem;
+    height: 2rem;
+}
+
 #restartBtn{
     padding: 0.8rem;
     border-radius: 0.3em;
@@ -174,6 +192,7 @@ p{
     margin-bottom: 0;
     padding-bottom: 0;
     text-align: center;
+    font-weight: 600;
 }
 
 /***** End Section Tour *****/

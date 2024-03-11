@@ -7,7 +7,8 @@ const scoreNull = document.querySelector('#scoreNull');
 const modalContainer = document.querySelector('.modal-container');
 const modalTitle = document.querySelector('.modalTitle');
 const closeModal = document.querySelector('.close-modal');
-const restartButton = document.querySelector("#restartBtn")
+const restartButton = document.querySelector("#restartBtn");
+const modal = document.querySelector(".modal");
 
 const state = {
 // valeurs par défaut
@@ -44,11 +45,14 @@ state.c9 = 0;
 };
 
 const resetAllGrid = () => {
-    resetState()
-    state.scoreP1 = 0;
-    state.scoreP2 = 0;
-    state.matchNull = 0;
+    player.textContent="1";
+    score1.textContent = "0";
+    score2.textContent = "0"; 
+    scoreNull.textContent = "0";
     cases.forEach((c) => (c.textContent = ""));
+    resetState()
+
+
 }
 
 /**
@@ -92,6 +96,7 @@ if (
 const toggleModal = () => {
     modalContainer.classList.toggle("active");
     
+    
 };
 
 /**
@@ -129,8 +134,8 @@ if (isVictory === true){
     cases.forEach((c) => (c.textContent = ""));
 
 } else if (isVictory === null){
-    toggleModal()
-    modalTitle.textContent = "Egalité ! "
+    toggleModal();
+    modalTitle.textContent = "Egalité ! ";
     state.matchNull++;
     scoreNull.textContent = state.matchNull;
     resetState();
@@ -161,7 +166,7 @@ cases.forEach((element) => {
 element.addEventListener("click", playCase)
 });
 
-closeModal.addEventListener("click", toggleModal );
+closeModal.addEventListener("click", toggleModal);
 
 restartButton.addEventListener("click", resetAllGrid);
 
