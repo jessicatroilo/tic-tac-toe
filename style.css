@@ -13,14 +13,21 @@ body{
     font-family: sans-serif;
     margin: 2rem;
     background-color : #4C0070;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
     
 }
 
 h1{
     color: #9168a8;
-    font-family: 'Metal Mania', display;
+    font-family: 'Metal Mania', display, sans-serif;
     font-size: 4rem;
+}
+
+footer{
+    margin-top: 2rem;
+    color: #9168a8;
+    font-family: 'Metal Mania', display, sans-serif;
+    font-size: large;
 }
 
 #grid{
@@ -38,8 +45,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ca45b2;
-    font-family: 'Metal Mania', display;
+
     
 }
 
